@@ -5,6 +5,10 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <div class="app-container">
+    <h1>Test</h1>
+  </div>
+</template>
 
 <style></style>
