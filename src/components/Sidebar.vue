@@ -10,5 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="sidebar-container"></div>
+  <div class="sidebar-container">
+    <!-- TODO: Create a responsive sidebar using TailwindCSS and DaisyUI, which displays your data and chat with your friends. -->
+  </div>
 </template>

@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 
-const Store = createStore({
+const store = createStore({
   state () {
     return {
       userData: {
@@ -13,4 +13,4 @@ const Store = createStore({
 })
 
 
-export default Store;
+export default store;
