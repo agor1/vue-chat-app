@@ -6,9 +6,5 @@ export default {
 </script>
 
 <template>
-  <div class="app-container">
-    <h1>Test</h1>
-  </div>
+  <div class="app-container"></div>
 </template>
-
-<style></style>
