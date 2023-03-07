@@ -20,11 +20,15 @@ export default {
 </script>
 
 <template>
-  <div class="sidebar-container w-screen h-16 bg-slate-50 box-border px-6">
-    <div class="flex flex-row justify-between items-center h-full">
+  <div
+    class="sidebar-container w-screen h-16 bg-slate-50 box-border px-6 lg:h-screen lg:w-80 lg:p-6"
+  >
+    <div
+      class="flex flex-row justify-between items-center h-full lg:items-start"
+    >
       <div class="flex flex-row justify-center items-center">
         <div
-          class="avatar placeholder"
+          class="avatar placeholder select-none cursor-pointer"
           :class="{ online: user.status, offline: !user.status }"
         >
           <div
@@ -36,7 +40,7 @@ export default {
         </div>
         <div class="user-info ml-4">
           <h1 class="text-base font-bold">
-            {{ user.firstName + " " + user.lastName }}
+            {{ `${user.firstName} ${user.lastName}` }}
           </h1>
           <h2 class="text-sm">
             {{ user.nickName }}
