@@ -32,7 +32,7 @@ export default {
           :class="{ online: user.status, offline: !user.status }"
         >
           <div
-            class="bg-neutral-focus text-neutral-content rounded-full w-10"
+            class="bg-neutral-focus text-neutral-content rounded-full w-10 hover:bg-opacity-80 transition-all"
             @click="user.status = !user.status"
           >
             <span>{{ user.firstName.charAt(0) }}</span>
