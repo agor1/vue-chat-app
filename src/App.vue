@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="app-container">
+  <div class="container bg-slate-100 h-screen w-screen">
     <Sidebar />
   </div>
 </template>

@@ -4,8 +4,9 @@ const store = createStore({
   state () {
     return {
       userData: {
-        firstname: 'Twój',
-        lastname: 'Stary',
+        firstName: 'Igor',
+        lastName: 'Wróbiński',
+        nickName: '@iwrobinski',
         avatar: ''
       }
     }
