@@ -1,4 +1,6 @@
 <script>
+import store from "../store/store";
+
 export default {
   name: "FriendsList",
   data() {
@@ -11,9 +13,9 @@ export default {
           lastMessage: "Dupa",
         },
         {
-          firstName: "Jacek",
-          lastName: "Placek",
-          nickName: "@jacekplacek",
+          firstName: "Jan",
+          lastName: "Paweł",
+          nickName: "@jp2",
           lastMessage: "Dupa",
         },
       ],
@@ -30,6 +32,7 @@ export default {
       class="w-full h-20 max-h-18 select-none cursor-pointer box-border p-4 rounded-lg hover:text-slate-50 hover:bg-primary lg:hover:bg-slate-100 lg:hover:text-neutral"
       v-for="(value, index) in friendsChats"
       :key="index"
+      @click="() => $store.commit('setUser', { user: value })"
     >
       <div class="flex flex-row items-center">
         <h1 class="text-base font-bold mr-4">

@@ -52,7 +52,9 @@ export default {
             </h2>
           </div>
         </div>
-        <div class="dropdown dropdown-bottom dropdown-end lg:dropdown-right">
+        <div
+          class="dropdown dropdown-bottom max-sm:dropdown-end lg:dropdown-right"
+        >
           <font-awesome-icon
             icon="fa-solid fa-gear"
             tabindex="0"
@@ -60,7 +62,7 @@ export default {
           />
           <ul
             tabindex="0"
-            class="dropdown-content menu p-2 bg-slate-50 rounded-box w-32 mt-12 lg:ml-12"
+            class="dropdown-content menu p-2 bg-slate-50 rounded-box w-32"
           >
             <li><a>Profil</a></li>
             <li><a>Ustawienia</a></li>
