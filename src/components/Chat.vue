@@ -5,7 +5,7 @@ export default {
   name: "Messages",
   data() {
     return {
-      message: "eqw uw",
+      message: "",
     };
   },
   computed: {
@@ -15,9 +15,13 @@ export default {
   },
   methods: {
     sendMessage() {
-      this.$store.commit("addMessage", { message: this.message });
-      console.log(this.message);
-      this.message = "";
+      if (this.message === "") {
+        return 0;
+      } else {
+        this.$store.commit("addMessage", { message: this.message });
+        console.log(this.message);
+        this.message = "";
+      }
     },
   },
 };
@@ -32,7 +36,6 @@ export default {
         </div>
       </div>
 
-      <!-- <p v-for="msg in $user.messages">{{ msg }}</p> -->
       <div class="chat chat-end">
         <div
           class="chat-bubble chat-bubble-primary mt-4"
@@ -43,11 +46,14 @@ export default {
       </div>
     </div>
 
-    <input
-      class="input w-full mt-10"
-      type="text"
-      v-model="message"
-      v-on:keyup.enter="sendMessage"
-    />
+    <div class="w-full h-20">
+      <input
+        class="input w-full mt-10 min-h-20"
+        type="text"
+        placeholder="Wyślij wiadomość"
+        v-model="message"
+        v-on:keyup.enter="sendMessage"
+      />
+    </div>
   </div>
 </template>
